@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1 - Exercise 1</title>
+</head>
+<body>
+
+</body>
+<script>
+
+	Array.prototype.isDual = function(){
+		newArray = this;
+		if(newArray.length % 2 == 0){
+			for(var i = 2;i<newArray.length; i=i+2){
+				if(newArray[0]+newArray[1] != newArray[i]+newArray[i+1]){
+					return 0;
+				}
+			}
+			return 1;
+		}
+		else return 0;
+	};
+	console.log([1,2,3,0].isDual());
+	console.log([1,2,2,1,3,0].isDual());
+	console.log([1,1,2,2].isDual());
+    console.log([1,2,3].isDual());
+	console.log([].isDual());
+</script>
+</html>

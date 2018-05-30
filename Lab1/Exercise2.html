@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1 - Exercise 2</title>
+</head>
+<body>
+
+</body>
+<script>
+
+	function isWeekend(){
+		const todayDate = new Date();
+		const day = todayDate.getDay();
+		return (day==0 || day==6 )? "Weekend":"Weekday";
+	}
+    console.log(isWeekend());
+</script>
+</html>

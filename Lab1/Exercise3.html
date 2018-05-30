@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1 - Exercise 3</title>
+</head>
+<body>
+
+</body>
+<script>
+	const item = {
+			"name": "Biscuits",
+			"type": "regular",
+			"category": "food",
+			"price": 2.0
+	}
+	
+	applyCoupon = category => discount => item => {
+													item.price = item.price * discount; 
+													return item;};
+    console.log(applyCoupon("food")(0.1)(item).price == 1.8);
+	//console.log(applyCoupon("food")(0.1)(item));
+</script>
+</html>
