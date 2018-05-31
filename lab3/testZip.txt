@@ -1,0 +1,1 @@
+after execution of exercise4.js, this file will be zip in testZip.txt.gz
