@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lab 5</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>data fetches with node-fetch using Promises</h2>
+	
+	<table>
+        <tr>
+		  <th>Id</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+		  <th>City</th>
+		  <th>Zip code</th>
+		  <th>Latitude</th>
+		  <th>Longitude</th>
+		  <th>Website</th>
+        </tr>
+		<% render.usersWithPromises.forEach(function(obj){ %>
+        <tr>
+		  <td><%=obj.id%></td>
+          <td><%=obj.name%></td>
+          <td><%=obj.username%></td>
+          <td><%=obj.email%></td>
+		  <td><%=obj.address.city%></td>
+		  <td><%=obj.address.zipcode%></td>
+		  <td><%=obj.address.geo.lat%></td>
+		  <td><%=obj.address.geo.lng%></td>
+		  <td><%=obj.website%></td>
+		  
+        </tr>
+        <%})%>
+	</table>
+	
+	<h2>data fetches with node-fetch using Reactive Programming (Observables)</h2>
+	
+	<table>
+        <tr>
+		  <th>Id</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+		  <th>City</th>
+		  <th>Zip code</th>
+		  <th>Latitude</th>
+		  <th>Longitude</th>
+		  <th>Website</th>
+        </tr>
+		<% render.usersWithObservables.forEach(function(obj){ %>
+        <tr>
+		  <td><%=obj.id%></td>
+          <td><%=obj.name%></td>
+          <td><%=obj.username%></td>
+          <td><%=obj.email%></td>
+		  <td><%=obj.address.city%></td>
+		  <td><%=obj.address.zipcode%></td>
+		  <td><%=obj.address.geo.lat%></td>
+		  <td><%=obj.address.geo.lng%></td>
+		  <td><%=obj.website%></td>
+		  
+        </tr>
+        <%})%>
+	</table>
+	
+	<h2>data fetches with node-fetch using Asyns/Await</h2>
+	
+	<table>
+        <tr>
+		  <th>Id</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+		  <th>City</th>
+		  <th>Zip code</th>
+		  <th>Latitude</th>
+		  <th>Longitude</th>
+		  <th>Website</th>
+        </tr>
+		<% render.usersWithAsyncAwait.forEach(function(obj){ %>
+        <tr>
+		  <td><%=obj.id%></td>
+          <td><%=obj.name%></td>
+          <td><%=obj.username%></td>
+          <td><%=obj.email%></td>
+		  <td><%=obj.address.city%></td>
+		  <td><%=obj.address.zipcode%></td>
+		  <td><%=obj.address.geo.lat%></td>
+		  <td><%=obj.address.geo.lng%></td>
+		  <td><%=obj.website%></td>
+		  
+        </tr>
+        <%})%>
+	</table>
+    
+  </body>
+</html>
