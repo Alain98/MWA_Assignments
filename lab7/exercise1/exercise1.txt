@@ -1,0 +1,25 @@
+Book {
+  _id: "",
+  isbn: "",
+  keywords: [],
+  authors: []
+}
+
+Student {
+   _id: "",
+   firsname: "",
+   lastname: "",
+   email : "",
+   borrowed_books: [
+	{
+	  book: "",
+	  return_date: ""
+	}
+   ],	  
+}
+
+Author {
+  _id: "",
+  name: "",
+  books: []
+}
