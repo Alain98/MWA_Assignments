@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
-var mongo = require('mongoskin');
+var mongo = require('mongodb');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,8 +12,8 @@ var secretsRouter = require('./routes/secrets');
 
 var app = express();
 
-var db = mongo.db('mongodb://localhost:27017/lab7',{native_parser: true});
-db.bind('homework7');
+var MongoClient = require('mongodb').MongoClient;
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -46,6 +46,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-db.close();
 app.listen(8080);
 module.exports = app;
