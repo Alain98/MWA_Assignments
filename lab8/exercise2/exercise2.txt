@@ -1,0 +1,5 @@
+the requirement said that keywords are used to facilitate search so I think we
+can put an index on keywords field.
+
+it also said that the librarian will be able to check all borrowed books so may 
+be also putting an index on a isbn field will be a good idea. 
