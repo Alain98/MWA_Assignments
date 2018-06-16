@@ -19,7 +19,7 @@ export class DbService {
 
   getDataFromId(farmId): object {
     for (let farm of this.farms) {
-      if (farm['_id'] === farmId) return farm;
+      if (farm['_id'] == farmId) return farm;
     }
     return null;
   }

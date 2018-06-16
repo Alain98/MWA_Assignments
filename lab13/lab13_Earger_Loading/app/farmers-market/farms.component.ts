@@ -9,7 +9,7 @@ import { DbService } from './db.service';
   template: `
   <ul>
     <li *ngFor="let farm of farms">
-        <a [routerLink]="['','farm-details', farm['_id']]">
+        <a [routerLink]="['/farm-details', farm['_id']]">
             {{farm['Farm']}}
         </a>
     </li>

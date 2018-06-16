@@ -26,7 +26,9 @@ export class FarmDetailsComponent implements OnDestroy {
 
   constructor(private route: ActivatedRoute, db: DbService) {
     this.sub = route.params.subscribe(param => {
+      console.log(param['id']);
       this.farm = db.getDataFromId(param['id']);
+      console.log(this.farm);
     });
   }
 
